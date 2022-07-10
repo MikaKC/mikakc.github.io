@@ -5,7 +5,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404! Not Found</title>
-    <link rel="stylesheet" href="http://mikakc.github.io/css/stylesheet.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+
+        html {
+        scroll-behavior: smooth;
+        }
+
+        :root{
+          /*vars ig*/
+          --number-of-characters: 6ch;
+          --number-of-characters-int: 6;
+          --number-of-characters-404: 41ch;
+          --number-of-characters-int-404: 41;
+        }
+
+        body {
+            background-color: rgb(19, 26, 26);
+            margin: 0;
+            font-family: 'Work-Sans', sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0% auto;
+        }
+
+        header {
+          background: #6855d6;
+        }
+
+        header::after {
+          content: '';
+          display: table;
+          clear: both;
+        }
+
+        .logo {
+          float: left;
+          padding: 10px 0;
+          width: 5%;
+          height: 5%;
+        }
+
+        nav {
+          float: right;
+        }
+
+        nav ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        nav li {
+          display: inline-block;
+          margin-left: 70px;
+          padding-top: 23px;
+
+          position: relative;
+        }
+
+        nav a {
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+
+        nav a:hover {
+          color: rgb(170, 170, 170);
+        }
+
+        nav a::before {
+          content: '';
+          display: block;
+          height: 5px;
+          background-color: #4f40a0;
+
+          position: absolute;
+          top: 0;
+          width: 0%;
+
+          transition: all ease-in-out 250ms;
+        }
+
+        nav a:hover::before {
+          width: 100%;
+        }
+
+        #white {
+          color:rgb(242, 251, 255);
+        }
+
+        .wrapper {
+          height: 75vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .typing {
+          width: var(--number-of-characters);
+          animation: typing 0.5s steps(var(--number-of-characters-int)), blink 1.2s linear infinite alternate;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 3px solid;
+          font-family: monospace;
+          font-size: 5em;
+        }
+
+        @keyframes typing {
+          from {
+            width: 0
+          }
+        }
+
+        @keyframes blink {
+          50% {
+            border-color: transparent;
+          }
+        }
+
+        .typing-404 {
+          width: var(--number-of-characters-404);
+          animation: typing 2s steps(var(--number-of-characters-int-404)), blink 1.2s linear infinite alternate;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 3px solid;
+          font-family: monospace;
+          font-size: 5em;
+        }
+
+        .fade-in {
+          animation: fadeIn ease 2s;
+          -webkit-animation: fadeIn ease 2s;
+          -moz-animation: fadeIn ease 2s;
+          -o-animation: fadeIn ease 2s;
+          -ms-animation: fadeIn ease 2s;
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-moz-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-webkit-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-o-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-ms-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        .down {
+          margin-top: -30vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #arrow {
+          filter: invert(100%) sepia(97%) saturate(12%) hue-rotate(216deg) brightness(102%) contrast(104%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align:center;
+          margin-left: 25cm;
+          margin-top:-18px;
+        }
+
+        #arrow:hover::before {
+          padding-top:10vh;
+        }
+
+        #arrow:hover::after {
+          padding-top:-10vh;
+        }
+
+
+        #no-deco {
+          transform: translateY(10cm);
+          text-decoration: none;
+        }
+    </style>
 </head>
 <header>
     <div class="container">
